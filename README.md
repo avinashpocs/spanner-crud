@@ -24,7 +24,8 @@ create table pnr_out_box(
     is_processed bool,
     retry_count int64,
     event_type string(max),
-    processed_by string(max)
+    processed_by string(max),
+    payload string(max)
 ) primary key(id);
 ```
 
@@ -33,6 +34,13 @@ create table pnr_out_box(
 CREATE TABLE POLLER_COMMIT_TIMESTAMPS (
     last_commit_timestamp TIMESTAMP
 ) PRIMARY KEY (last_commit_timestamp);
+```
+* message outbox confirmation - not needed
+```
+create table message_outbox_confirmation(
+    id string(max),
+	process_status bool
+) primary key(id);
 ```
 
 # References

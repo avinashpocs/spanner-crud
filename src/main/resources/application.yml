@@ -1,5 +1,5 @@
 # server properties
-server.port: 8080
+server.port: 8081
 
 # actuator properties
 management:
@@ -28,7 +28,7 @@ spring:
   profiles.active: test
   cloud:
     gcp:
-      project-id: gcp-practice-project-307011
+      project-id: silver-approach-307010
       spanner:
         instance-id: instance-1
         database: database-1
@@ -46,7 +46,7 @@ app:
 spring.profiles: test
 
 app:
-  publish.base.url: http://35.225.207.54:8080
+  publish.base.url: http://localhost:8080
   publish.end.point: /api/v1/publish
 ---
 spring.profiles: prod
